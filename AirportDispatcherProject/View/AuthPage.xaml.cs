@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AirportDispatcherLibrary;
 
 namespace AirportDispatcherProject.View
 {
@@ -27,27 +28,8 @@ namespace AirportDispatcherProject.View
 
         private void AuthButtonClick(object sender, RoutedEventArgs e)
         {
-            //проверка корректности заполнения логина
-            if (
-                AuthLoginTextBox.Text != String.Empty
-                && AuthPasswordBox.Password != String.Empty
-                && !String.IsNullOrWhiteSpace(AuthLoginTextBox.Text)
-                && !String.IsNullOrWhiteSpace(AuthPasswordBox.Password)
-                )
-            {
-                //проверка присутствия данных в БД
-                //int countRecord = этоБаза
-                // .Where(x => x.Login == AuthLoginTextBox.Text && x.Password == AuthPasswordBox.Password)
-                // .Count();
-                //if (countRecord == 1)
-                //{
-                //    this.NavigationService.Navigate(new MainMenuPage());
-                //}
-            }
-            else
-            {
-                MessageBox.Show("Неверный логин или пароль");
-            }
+            UserAuthRegClass newObject = new UserAuthRegClass();
+            newObject.UserAuth(AuthLoginTextBox.Text, AuthPasswordBox.Password);
         }
     }
 }
