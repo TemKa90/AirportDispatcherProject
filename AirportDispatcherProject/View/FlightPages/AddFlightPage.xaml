@@ -4,14 +4,37 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AirportDispatcherProject.View.FlightPages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddFlightPage">
+      mc:Ignorable="d" Title="AddFlightPage">
 
-    <Grid>
-        <StackPanel HorizontalAlignment="Center">
-            <TextBlock FontSize="17">Название компании</TextBlock>
-            <ListBox x:Name="CompanyNameListBox" Width="300" Height="25"></ListBox>
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock FontSize="24">Добавление рейса</TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <GroupBox Header="Основные данные">
+                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                    <TextBlock FontSize="17">Самолёт</TextBlock>
+                    <ComboBox x:Name="AirplaneComboBox" Width="300"></ComboBox>
+                    <TextBlock FontSize="17">Компания</TextBlock>
+                    <ComboBox x:Name="CompanyComboBox" Width="300"></ComboBox>
+                    <TextBlock FontSize="17">Дата отправления</TextBlock>
+                    <DatePicker x:Name="DateOfDepartureDatePicker" Width="300" Height="25"></DatePicker>
+                    <TextBlock FontSize="17">Время отправления</TextBlock>
+                    <TextBox x:Name="TimeOfDepartureTextBox" Width="300" Height="25"></TextBox>
+                    <TextBlock FontSize="17">Аэропорт отправления</TextBlock>
+                    <ComboBox x:Name="DepartureAirportComboBox" Width="300"></ComboBox>
+                    <TextBlock FontSize="17">Аэропорт прибытия</TextBlock>
+                    <ComboBox x:Name="ArrivalAirportComboBox" Width="300"></ComboBox>
+                </StackPanel>
+            </GroupBox>
+            <Button Style="{DynamicResource EditButtonStyle}" x:Name="AddFlightButton" Click="AddFlightButtonClick">Добавить рейс</Button>
         </StackPanel>
     </Grid>
 </Page>

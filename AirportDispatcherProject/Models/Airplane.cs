@@ -20,10 +20,9 @@ namespace AirportDispatcherProject.Models
             this.Flights = new HashSet<Flights>();
         }
     
-        public int IdAirplain { get; set; }
+        public int IdAirplane { get; set; }
         public string Name { get; set; }
         public int SeatsCount { get; set; }
-        public int FreeSeatsCount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Flights> Flights { get; set; }

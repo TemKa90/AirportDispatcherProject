@@ -16,11 +16,11 @@ namespace AirportDispatcherProject.Models
     {
         public int IdTicket { get; set; }
         public int Flight { get; set; }
-        public int Passenger { get; set; }
-        public string Number { get; set; }
+        public int PassengerName { get; set; }
+        public string TicketNumber { get; set; }
         public System.DateTime BookingDateTime { get; set; }
     
         public virtual Flights Flights { get; set; }
-        public virtual Passenger Passenger1 { get; set; }
+        public virtual Passenger Passenger { get; set; }
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AirportDispatcherProject.Models;
+using AirportDispatcherProject.View.FlightPages;
+using AirportDispatcherProject.View.PassengerPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +23,27 @@ namespace AirportDispatcherProject.View
     /// </summary>
     public partial class MainMenuPage : Page
     {
+        Core db = new Core();
+        MainWindow mw = Application.Current.MainWindow as MainWindow;
+
         public MainMenuPage()
         {
             InitializeComponent();
-
-        }
-        private void FlightsButtonClick(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new FlightListPage());
         }
 
-        private void TicketsButtonClick(object sender, RoutedEventArgs e)
+        private void TicketsPageButtonClick(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new TicketListPage());
+            this.NavigationService.Navigate(new TicketsListPage());
+        }
+
+        private void FlightsPageButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new FlightsListPage());
+        }
+
+        private void PassengersPageButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new PassengersListPage());
         }
     }
 }

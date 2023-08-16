@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportDispatcherProject", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportDispatcherLibrary", "AirportDispatcherLibrary\AirportDispatcherLibrary.csproj", "{7021D6FC-28D5-4CC0-B10B-606A3E0FD006}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportDispatcherLibraryTests", "AirportDispatcherLibraryTests\AirportDispatcherLibraryTests.csproj", "{7C4C2AE5-3EF7-411F-84DE-5E765AF0DEFA}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupProject", "AirportDispatcherProject\SetupProject\SetupProject.vdproj", "{475E1064-C3F0-4E21-B956-92D8B21433D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,12 @@ Global
 		{7021D6FC-28D5-4CC0-B10B-606A3E0FD006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7021D6FC-28D5-4CC0-B10B-606A3E0FD006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7021D6FC-28D5-4CC0-B10B-606A3E0FD006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C4C2AE5-3EF7-411F-84DE-5E765AF0DEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C4C2AE5-3EF7-411F-84DE-5E765AF0DEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C4C2AE5-3EF7-411F-84DE-5E765AF0DEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C4C2AE5-3EF7-411F-84DE-5E765AF0DEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475E1064-C3F0-4E21-B956-92D8B21433D4}.Debug|Any CPU.ActiveCfg = Debug
+		{475E1064-C3F0-4E21-B956-92D8B21433D4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

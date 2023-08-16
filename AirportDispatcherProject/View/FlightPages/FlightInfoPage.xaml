@@ -1,0 +1,58 @@
+﻿<Page x:Class="AirportDispatcherProject.View.FlightPages.FlightInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AirportDispatcherProject.View.FlightPages"
+      mc:Ignorable="d" Title="FlightInfoPage">
+
+    <Grid Margin="0,0,0,-96">
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock FontSize="24">Информация о рейсе</TextBlock>
+                <Button Style="{DynamicResource CloseButtonStyle}" Grid.Column="1" x:Name="CloseButton" Click="CloseButtonClick">
+                    <Button.Content>
+                        <Image Source="/Assets/Images/close-button-icon.png" Height="10" Width="10"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <GroupBox Header="Основные данные">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock FontSize="17">Номер рейса:</TextBlock>
+                        <TextBlock x:Name="FlightNumberTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Название компании:</TextBlock>
+                        <TextBlock x:Name="CompanyNameTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Дата отправки:</TextBlock>
+                        <TextBlock x:Name="DateOfDepartureTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Время отправки:</TextBlock>
+                        <TextBlock x:Name="TimeOfDepartureTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Аэропорт отправки:</TextBlock>
+                        <TextBlock x:Name="PointOfDepartureTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Аэропорт прибытия:</TextBlock>
+                        <TextBlock x:Name="PointOfArrivalTextBlock"></TextBlock>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Информация о самолёте">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock FontSize="17">Самолёт:</TextBlock>
+                        <TextBlock x:Name="AirplaneTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Количество мест:</TextBlock>
+                        <TextBlock x:Name="SeatsTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Количество свободных мест:</TextBlock>
+                        <TextBlock x:Name="FreeSeatsTextBlock"></TextBlock>
+                    </StackPanel>
+                </GroupBox>
+                <Button Style="{DynamicResource EditButtonStyle}"  x:Name="EditPassengerButton" Click="EditPassengerButtonClick">Редактировать данные</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

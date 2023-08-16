@@ -1,0 +1,205 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:AirportDispatcherProject">
+    
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Foreground" Value="#fff"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource ButtonStyle}"-->
+
+    <Style x:Key="BackButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Foreground" Value="#fff"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="0, 0, 10, 0"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource BackButtonStyle}"-->
+
+    <Style x:Key="CloseButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Foreground" Value="#fff"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="100" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="20, 8, 0, 0"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource CloseButtonStyle}"-->
+
+    <Style x:Key="EditButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Foreground" Value="#fff"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="Height" Value="30"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource EditButtonStyle}"-->
+
+    <Style x:Key="EditBackButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Foreground" Value="#fff"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="20" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="30"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource EditBackButtonStyle}"-->
+
+    <Style x:Key="ComboBoxButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource ComboBoxButtonStyle}"-->
+
+    <Style x:Key="MainMenuButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="#6ED3FF"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="Width" Value="160"/>
+        <Setter Property="Height" Value="120"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#92DEFF"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource MainMenuButtonStyle}"-->
+
+    <!--<Style TargetType="ComboBox">
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="15" />
+            </Style>
+        </Style.Resources>
+    </Style>-->
+
+    <Style TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Comic Sans MS" />
+    </Style>
+
+    <Style x:Key="ButtonTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Comic Sans MS" />
+        <Setter Property="Foreground" Value="Blue"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="TextDecorations" Value="Underline"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--Style="{DynamicResource ButtonTextBlock}"-->
+
+    <Style TargetType="TextBox">
+        <!--<Setter Property="Background" Value="LightGray"/>-->
+        <Setter Property="FontFamily" Value="Comic Sans MS" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="7" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <Style TargetType="PasswordBox">
+        <!--<Setter Property="Background" Value="LightGray"/>-->
+        <Setter Property="FontFamily" Value="Comic Sans MS" />
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="7" />
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <!--<Style TargetType="{x:Type Page}">
+        <Setter Property="FontFamily" Value="Comic Sans MS" />
+    </Style>
+    --><!--Style = (Style)FindResource(typeof(Page));-->
+</ResourceDictionary>

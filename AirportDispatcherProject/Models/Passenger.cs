@@ -26,8 +26,8 @@ namespace AirportDispatcherProject.Models
         public string PatronymicName { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
-        public System.DateTime DateOfBirth { get; set; }
-        public int PassportNumber { get; set; }
+        public Nullable<System.DateTime> DateOfBirth { get; set; }
+        public string PassportNumber { get; set; }
         public string PlaseOfPassportIssue { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

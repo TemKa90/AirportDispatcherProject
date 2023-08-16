@@ -4,13 +4,41 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AirportDispatcherProject.View.FlightPages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="EditFlightPage">
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="EditFlightPage" Height="655.683">
 
-    <Grid>
-        <TextBlock FontSize="50">
-            
-        </TextBlock>
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock FontSize="24">Редактирование данных о рейсе</TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <GroupBox Header="Основные данные">
+                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                    <TextBlock FontSize="17">Название компании</TextBlock>
+                    <ComboBox x:Name="CompanyComboBox" Width="300"></ComboBox>
+                    <TextBlock FontSize="17">Дата отправления</TextBlock>
+                    <DatePicker x:Name="DateOfDepartureDatePicker" Width="300"></DatePicker>
+                    <TextBlock FontSize="17">Время отправления</TextBlock>
+                    <TextBox x:Name="TimeOfDepartureTextBox" Width="300"></TextBox>
+                    <TextBlock FontSize="17">Аэропорт отправления</TextBlock>
+                    <ComboBox x:Name="DepartureAirportComboBox" Width="300"></ComboBox>
+                    <TextBlock FontSize="17">Аэропорт прибытия</TextBlock>
+                    <ComboBox x:Name="ArrivalAirportComboBox" Width="300"></ComboBox>
+                    <TextBlock FontSize="17">Самолёт</TextBlock>
+                    <ComboBox x:Name="AirplaneComboBox" Width="300"></ComboBox>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style="{DynamicResource EditBackButtonStyle}" x:Name="BackButton" Click="BackButtonClick">Назад</Button>
+                <Button Style="{DynamicResource EditButtonStyle}" x:Name="EditPassengerButton" Click="EditPassengerButtonClick">Сохранить изменения</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

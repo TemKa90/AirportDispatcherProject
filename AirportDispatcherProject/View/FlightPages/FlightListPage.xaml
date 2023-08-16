@@ -8,17 +8,33 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="FlightListPage">
 
-    <Grid Background="LightGray">
+    <Grid HorizontalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
-        <TextBlock FontSize="30">Список рейсов</TextBlock>
-        <StackPanel Grid.Row="3" VerticalAlignment="Center" Orientation="Horizontal">
-            <Button x:Name="AddFlightButton" Width="150" Height="35" Margin="10" Click="AddFlightButtonClick">Добавить</Button>
-            <Button x:Name="EditFlightButton" Width="150" Height="35" Margin="10" Click="EditFlightButtonClick">Редактировать</Button>
-            <Button Width="150" Height="35" Margin="10">Удалить</Button>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal" Height="30">
+            <TextBox Width="300">Поиск</TextBox>
+            <ComboBox x:Name="SelectComboBox" SelectionChanged="SelectComboBoxSelectionChanged" Width="150" Margin="20, 0, 0, 0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left">
+            <TextBlock FontSize="32">Список рейсов</TextBlock>
+            <ListView Width="500">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }"></TextBlock>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button x:Name="AddTicketButton" Width="150" Height="35" Click="AddTicketButtonClick">Добавить</Button>
+            <Button Width="150" Height="35" Margin="20, 0, 0, 0">Редактировать</Button>
+            <Button Width="150" Height="35" Margin="20, 0, 0, 0">Удалить</Button>
         </StackPanel>
     </Grid>
 </Page>

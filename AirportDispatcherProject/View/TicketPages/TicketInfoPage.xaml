@@ -1,0 +1,46 @@
+﻿<Page x:Class="AirportDispatcherProject.View.TicketPages.TicketInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AirportDispatcherProject.View.TicketPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TicketInfoPage">
+
+    <Grid>
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock FontSize="24">Информация о билете</TextBlock>
+                <Button Style="{DynamicResource CloseButtonStyle}" Grid.Column="1" x:Name="CloseButton" Click="CloseButtonClick">
+                    <Button.Content>
+                        <Image Source="/Assets/Images/close-button-icon.png" Height="10" Width="10"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <GroupBox Header="Основные данные">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock FontSize="17">Номер билета</TextBlock>
+                        <TextBlock x:Name="TicketNumberTextBlock"></TextBlock>
+                        <TextBlock FontSize="17">Рейс</TextBlock>
+                        <TextBlock Style="{DynamicResource ButtonTextBlock}" x:Name="FlightTextBlock" MouseLeftButtonDown="FlightTextBlockMouseLeftButtonDown"></TextBlock>
+                        <TextBlock FontSize="17">Пассажир</TextBlock>
+                        <TextBlock Style="{DynamicResource ButtonTextBlock}" x:Name="PassengerTextBlock" MouseLeftButtonDown="PassengerTextBlockMouseLeftButtonDown"></TextBlock>
+                        <TextBlock FontSize="17">Дата и время бронирования</TextBlock>
+                        <TextBlock x:Name="BookingDateTimeTextBlock"></TextBlock>
+                    </StackPanel>
+                </GroupBox>
+
+                <Button Style="{DynamicResource EditButtonStyle}" x:Name="DellTicketButton" Click="DellTicketButtonClick">Вернуть билет</Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

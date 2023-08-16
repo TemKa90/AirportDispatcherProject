@@ -8,10 +8,32 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainMenuPage">
 
-    <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button x:Name="FlightsButton" Width="200" Height="50" Margin="20" Click="FlightsButtonClick" Content="Рейсы"/>
-            <Button x:Name="TicketsButton" Width="200" Height="50" Margin="20" Click="TicketsButtonClick" Content="Билеты"/>
+    <Grid HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel>
+                <Button Style="{DynamicResource MainMenuButtonStyle}" x:Name="TicketsPageButton" Click="TicketsPageButtonClick">
+                    <Button.Content>
+                        <Image Source="..\Assets\Images\ticket.png" Stretch="UniformToFill" Height="100" Width="110"/>
+                    </Button.Content>
+                </Button>
+                <TextBlock HorizontalAlignment="Center" FontSize="26">Билеты</TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{DynamicResource MainMenuButtonStyle}" x:Name="FlightsPageButton" Click="FlightsPageButtonClick">
+                    <Button.Content>
+                        <Image Source="..\Assets\Images\airplane.png" Stretch="UniformToFill" Height="100" Width="122"/>
+                    </Button.Content>
+                </Button>
+                <TextBlock HorizontalAlignment="Center" FontSize="26">Рейсы</TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{DynamicResource MainMenuButtonStyle}" x:Name="PassengersPageButton" Click="PassengersPageButtonClick">
+                    <Button.Content>
+                        <Image Source="..\Assets\Images\passenger.png" Stretch="UniformToFill" Height="100" Width="66"/>
+                    </Button.Content>
+                </Button>
+                <TextBlock HorizontalAlignment="Center" FontSize="26">Пассажиры</TextBlock>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

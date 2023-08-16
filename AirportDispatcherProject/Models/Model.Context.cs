@@ -26,11 +26,11 @@ namespace AirportDispatcherProject.Models
         }
     
         public virtual DbSet<Airplane> Airplane { get; set; }
+        public virtual DbSet<Companies> Companies { get; set; }
         public virtual DbSet<Flights> Flights { get; set; }
         public virtual DbSet<Passenger> Passenger { get; set; }
         public virtual DbSet<PointOfArrival> PointOfArrival { get; set; }
         public virtual DbSet<PointOfDeparture> PointOfDeparture { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Ticket> Ticket { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }

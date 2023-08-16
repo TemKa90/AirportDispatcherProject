@@ -13,14 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AirportDispatcherLibrary;
+using AirportDispatcherProject.ViewModel;
 
 namespace AirportDispatcherProject.View
 {
     /// <summary>
-    /// Логика взаимодействия для AuthPage.xaml
+    ///     Логика взаимодействия для AuthPage.xaml
     /// </summary>
     public partial class AuthPage : Page
     {
+        UsersViewModel userObject = new UsersViewModel();
+
         public AuthPage()
         {
             InitializeComponent();
@@ -28,8 +31,32 @@ namespace AirportDispatcherProject.View
 
         private void AuthButtonClick(object sender, RoutedEventArgs e)
         {
-            UserAuthRegClass newObject = new UserAuthRegClass();
-            newObject.UserAuth(AuthLoginTextBox.Text, AuthPasswordBox.Password);
+            if (
+                AuthLoginTextBox.Text != String.Empty
+                && AuthPasswordBox.Password != String.Empty
+                && !String.IsNullOrWhiteSpace(AuthLoginTextBox.Text)
+                && !String.IsNullOrWhiteSpace(AuthPasswordBox.Password)
+                )
+            {
+                if (userObject.UserAuth(AuthLoginTextBox.Text, AuthPasswordBox.Password))
+                {
+                    Console.WriteLine("Условие соблюдено");
+                    this.NavigationService.Navigate(new MainMenuPage());
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не введен логин или пароль");
+            }
+        }
+
+        private void RegButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RegPage());
         }
     }
 }

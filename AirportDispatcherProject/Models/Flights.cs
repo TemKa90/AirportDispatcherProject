@@ -21,17 +21,22 @@ namespace AirportDispatcherProject.Models
         }
     
         public int IdFlight { get; set; }
+        public string FlightNumber { get; set; }
         public int CompanyCode { get; set; }
-        public string CompanyName { get; set; }
-        public System.DateTime Date { get; set; }
-        public System.TimeSpan Time { get; set; }
-        public int PointOfDeparture { get; set; }
-        public int PointOfArrival { get; set; }
-        public int Airplain { get; set; }
+        public int CompanyName { get; set; }
+        public System.DateTime DateOfDeparture { get; set; }
+        public Nullable<System.TimeSpan> TimeOfDeparture { get; set; }
+        public int PointOfDepartureId { get; set; }
+        public int PointOfArrivalId { get; set; }
+        public int AirplaneId { get; set; }
+        public int FreeSeatsCount { get; set; }
+        public decimal Price { get; set; }
     
         public virtual Airplane Airplane { get; set; }
-        public virtual PointOfArrival PointOfArrival1 { get; set; }
-        public virtual PointOfDeparture PointOfDeparture1 { get; set; }
+        public virtual Companies Companies { get; set; }
+        public virtual Companies Companies1 { get; set; }
+        public virtual PointOfArrival PointOfArrival { get; set; }
+        public virtual PointOfDeparture PointOfDeparture { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Ticket { get; set; }
     }

@@ -1,4 +1,7 @@
 ﻿using AirportDispatcherProject.View;
+using AirportDispatcherProject.View.FlightPages;
+using AirportDispatcherProject.View.PassengerPages;
+using AirportDispatcherProject.View.TicketPages; //Убрать ненужные
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,27 +27,7 @@ namespace AirportDispatcherProject
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthPage());
-        }
-
-        private void BackButtonClick(object sender, RoutedEventArgs e)
-        {
-            if (MainFrame.CanGoBack)
-            {
-                MainFrame.GoBack();
-            }
-        }
-
-        private void MainFrameContentRendered(object sender, EventArgs e)
-        {
-            if (!MainFrame.CanGoBack)
-            {
-                BackButton.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                BackButton.Visibility = Visibility.Visible;
-            }
+            MainFrame.Navigate(new AuthPage()); //Заменить на AuthPage
         }
     }
 }

@@ -34,5 +34,15 @@ namespace AirportDispatcherProject.View
         {
             this.NavigationService.Navigate(new EditFlightPage());
         }
+
+        private void AddTicketButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SelectComboBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
